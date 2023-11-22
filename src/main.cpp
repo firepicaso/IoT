@@ -16,6 +16,7 @@ void setup() {
   Serial.begin(9600); // Initialize serial communication
 
   blinkLED(5, 500);
+  
   Serial.println("\n Blinked 5 times");
 }
 
