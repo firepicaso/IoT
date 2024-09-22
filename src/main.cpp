@@ -15,7 +15,7 @@ void setup() {
   pinMode(BUILTIN_PIN, OUTPUT); // Set the LED pin as an output
   Serial.begin(9600); // Initialize serial communication
 
-  blinkLED(5, 500);
+  blinkLED(5, 2000);
   Serial.println("\n Blinked 5 times");
 }
 
