@@ -1,24 +1,16 @@
 #include <Arduino.h>
 
-const int BUILTIN_PIN = 2; // GPIO pin connected to the LED
-
-void blinkLED(int times, int delayTime) {
-  for (int i = 0; i < times; i++) {
-    digitalWrite(BUILTIN_PIN, HIGH);
-    delay(delayTime);
-    digitalWrite(BUILTIN_PIN, LOW);
-    delay(delayTime);
-  }
-}
+const int GREEN_PIN = 14; // GPIO pin connected to the LED
 
 void setup() {
-  pinMode(BUILTIN_PIN, OUTPUT); // Set the LED pin as an output
+  pinMode(GREEN_PIN, OUTPUT); // Set the LED pin as an output
   Serial.begin(9600); // Initialize serial communication
-
-  blinkLED(5, 2000);
-  Serial.println("\n Blinked 5 times");
 }
 
 void loop() {
-  // some code
+  digitalWrite(GREEN_PIN, HIGH);
+  delay(500);
+  digitalWrite(GREEN_PIN, LOW);
+  Serial.println("\n Blinked GREEN");
+  delay(1000);
 }
